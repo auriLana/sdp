@@ -1,0 +1,60 @@
+@include _979 {
+  .burger {
+    display: block;
+    position: relative;
+    width: 2.7rem;
+    height: 2.9rem;
+    z-index: 9999999;
+    background-color: transparent;
+    &__line {
+      position: absolute;
+      width: 2.4rem;
+      height: 0.3rem;
+      border-radius: 0.4rem;
+      background-color: $colorDefault;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease-in-out, top 0.3s, left 0.3s ease-in-out;
+    }
+
+    &__line:nth-child(1) {
+      top: 0.3rem;
+    }
+
+    &__line:nth-child(3) {
+      bottom: 0.3rem;
+    }
+
+    &__line:nth-child(2) {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      .burger-active {
+        opacity: 0;
+      }
+    }
+  }
+  .burger-active .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-active .burger__line:nth-child(1) {
+    left: 25%;
+    top: 50%;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .burger-active .burger__line:nth-child(3) {
+    bottom: auto;
+    left: 25%;
+    top: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .stop-scroll {
+    overflow: hidden;
+  }
+
+}

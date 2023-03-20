@@ -1,0 +1,85 @@
+.oxford {
+  position: relative;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  margin-bottom: 7rem;
+  max-height: 60rem;
+  background-image: url("./images/desktop/oxford.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $colorTextMenu;
+  @include _1190 {
+    background-image: url("./images/1024/oxford.jpg");
+  }
+  @include _768 {
+    background-image: url("./images/768/oxford.jpg");
+    .container {
+      padding: 0 3.6rem;
+    }
+  }
+  @include _480 {
+    background-image: url("./images/320/oxford.jpg");
+    margin-bottom: 16rem;
+    .container {
+      min-width: 32rem;
+      padding: 0 1.2rem;
+    }
+  }
+  @include _350 {
+    padding-top: 3.4rem;
+    padding-bottom: 4rem;
+    .btn {
+      position: absolute;
+      bottom: -9.5rem;
+      width: 92%;
+    }
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 120%;
+    color: #d5b986;
+    @include _1190 {
+      line-height: 128%;
+    }
+    @include _600 {
+      font-size: 4rem;
+      line-height: 120%;
+    }
+    @include _350 {
+      font-size: 2.4rem;
+      line-height: 120%;
+    }
+  }
+  &__descr {
+    margin: 0;
+    margin-bottom: 4.9rem;
+    padding: 0;
+    width: 39%;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 120%;
+    color: #ffffff;
+    @include _1190 {
+      width: 50%;
+    }
+    @include _768 {
+      width: 80%;
+    }
+    @include _600 {
+      width: 100%;
+      font-size: 3rem;
+    }
+    @include _350 {
+      width: 79%;
+      font-size: 1.6rem;
+      margin-bottom: 6.9rem;
+    }
+  }
+}

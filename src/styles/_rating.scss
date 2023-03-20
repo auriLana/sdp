@@ -1,0 +1,123 @@
+.rating {
+  margin-bottom: 6.8rem;
+  @include _1190 {
+    margin-bottom: 7rem;
+  }
+  @include _350 {
+    margin-bottom: 7.3rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 2.2rem;
+    padding: 0;
+    font-weight: 400;
+    font-size: 3.5rem;
+    @include _1190 {
+      margin-bottom: 2.5rem;
+    }
+    @include _480 {
+      width: 80%;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__wrapper {
+    margin-bottom: 3.2rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+    .item__descr {
+      padding-left: 1.5rem;
+      @include _480 {
+        padding-left: 0;
+      }
+    }
+    @include _1190 {
+      grid-template-columns: repeat(9, 1fr);
+    }
+    @include _768 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include _480 {
+      gap: 1.6rem;
+    }
+  }
+  &__item {
+    grid-column: span 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem 1.5rem 2.8rem;
+    background-color: $colorBackgroundCard;
+    border-radius: 1rem;
+    @include _1190 {
+      &:nth-last-child(-n + 2) {
+        display: none;
+      }
+    }
+    @include _480 {
+      padding: 1.5rem 1.4rem;
+      .btn {
+        padding: 1rem 2.3rem;
+      }
+    }
+    .item__title {
+      @include _350 {
+        font-size: 1.7rem;
+        line-height: 119%;
+      }
+    }
+
+    .item__price {
+      margin: 2.35rem 0;
+      @include _480 {
+        margin: 1.9rem 0;
+      }
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+    @include _1190 {
+      padding: 2rem 3.2rem;
+    }
+  }
+}
+
+.item {
+  &__star {
+    margin-left: 1.5rem;
+    padding-left: 2.5rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: $colorIconDef;
+    background-image: url("./images/star.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    @include _480 {
+      margin-left: 0;
+      font-size: 1.2rem;
+      padding-left: 2.2rem;
+    }
+  }
+  &__img-wrapper--small {
+    display: flex;
+    flex-direction: column;
+    min-height: 14rem;
+    margin-bottom: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    @include _480 {
+      min-height: 5.8rem;
+    }
+  }
+  &__price--catalog {
+    color: $colorPrice;
+  }
+}

@@ -1,0 +1,123 @@
+.feedback {
+  padding-bottom: 5rem;
+  @include _1190 {
+    padding-bottom: 5.4rem;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3.2rem;
+    @include _1190 {
+      grid-template-columns: repeat(9, 1fr);
+    }
+    @include _979 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__descr {
+    grid-column: span 6;
+    @include _1190 {
+      grid-column: span 4;
+    }
+    @include _768 {
+      grid-column: span 4;
+    }
+    @include _480 {
+      grid-column: span 6;
+    }
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    font-size: 3.4rem;
+    line-height: 100%;
+    @include _350 {
+      font-size: 2.5rem;
+    }
+  }
+  &__img {
+    grid-column: span 6;
+    padding-top: 2.5rem;
+    @include _1190 {
+      grid-column: span 5;
+      padding-top: 7.8rem;
+    }
+    @include _768 {
+      grid-column: span 2;
+      padding-top: 1.8rem;
+    }
+    @include _480 {
+      display: none;
+    }
+  }
+  .btn {
+    padding: 2rem 3.3rem;
+    @include _350 {
+      padding: 1.8rem 3.3rem;
+    }
+  }
+}
+
+.form {
+  margin-bottom: 1.2rem;
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 3rem;
+  }
+  &__input {
+    width: 100%;
+    min-height: 5.4rem;
+    padding: 0.7rem 1.8rem;
+    background: $colorBackgroundCard;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    &:focus {
+      background: $colorFormBgFocus;
+      outline: 1px solid $colorDefault;
+    }
+
+    &:hover {
+      background: $colorBgDis;
+    }
+
+    &:active {
+      background: $colorBackgroundCard;
+      outline: 1px solid #b8ec64;
+    }
+  }
+  &__check {
+    margin-top: 1rem;
+    @include _1190 {
+      margin-top: 1.4rem;
+    }
+    @include _350 {
+      font-size: 1.3rem;
+    }
+  }
+  @include _1190 {
+    &__checkbox--link {
+      font-size: 1.5rem;
+    }
+  }
+  @include _350 {
+    &__checkbox--link {
+      font-size: 1.2rem;
+    }
+  }
+}
+.error {
+  color: red;
+  .form__input {
+    outline: 1px solid red;
+  }
+  @include _350 {
+    .error-label {
+      font-size: 1rem;
+    }
+  }
+}
